@@ -1,6 +1,7 @@
 import React from "react";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
+import Navbar from "./components/navbar";
 import "./App.css";
 function App() {
   const options = {
@@ -32,9 +33,10 @@ function App() {
 
   return (
     <div className="App ">
+      <Navbar />
       {/*<HighchartsReact highcharts={Highcharts} options={options} />*/}
       <div
-        className="d-flex m-auto "
+        className="d-flex m-auto mt-3"
         style={{
           maxWidth: "1180px",
           justifyContent: "space-between",
