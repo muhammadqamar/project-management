@@ -1,159 +1,17 @@
 import React from "react";
+import { VictoryPie } from "victory";
 import "./App.css";
-import { ResponsivePie } from "@nivo/pie";
 function App() {
-  const data = [
-    {
-      id: "ruby",
-      label: "ruby",
-      value: 85,
-      color: "hsl(110, 70%, 50%)",
-    },
-    {
-      id: "haskell",
-      label: "haskell",
-      value: 366,
-      color: "hsl(292, 70%, 50%)",
-    },
-    {
-      id: "c",
-      label: "c",
-      value: 185,
-      color: "hsl(41, 70%, 50%)",
-    },
-    {
-      id: "make",
-      label: "make",
-      value: 147,
-      color: "hsl(230, 70%, 50%)",
-    },
-    {
-      id: "go",
-      label: "go",
-      value: 230,
-      color: "hsl(219, 70%, 50%)",
-    },
-  ];
-
   return (
     <div className="App ">
       <h1 className="mt-5 se">Active Project Management</h1>
-      <ResponsivePie
-        data={data}
-        margin={{ top: 40, right: 445, bottom: 80, left: 80 }}
-        startAngle={88}
-        endAngle={-89}
-        innerRadius={0.6}
-        cornerRadius={5}
-        activeOuterRadiusOffset={8}
-        borderWidth={1}
-        borderColor={{
-          from: "color",
-          modifiers: [["darker", 0.2]],
-        }}
-        arcLinkLabelsSkipAngle={10}
-        arcLinkLabelsTextColor="#333333"
-        arcLinkLabelsThickness={2}
-        arcLinkLabelsColor={{ from: "color" }}
-        arcLabelsSkipAngle={10}
-        arcLabelsTextColor={{
-          from: "color",
-          modifiers: [["darker", 2]],
-        }}
-        defs={[
-          {
-            id: "dots",
-            type: "patternDots",
-            background: "inherit",
-            color: "rgba(255, 255, 255, 0.3)",
-            size: 4,
-            padding: 1,
-            stagger: true,
-          },
-          {
-            id: "lines",
-            type: "patternLines",
-            background: "inherit",
-            color: "rgba(255, 255, 255, 0.3)",
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-          },
-        ]}
-        fill={[
-          {
-            match: {
-              id: "ruby",
-            },
-            id: "dots",
-          },
-          {
-            match: {
-              id: "c",
-            },
-            id: "dots",
-          },
-          {
-            match: {
-              id: "go",
-            },
-            id: "dots",
-          },
-          {
-            match: {
-              id: "python",
-            },
-            id: "dots",
-          },
-          {
-            match: {
-              id: "scala",
-            },
-            id: "lines",
-          },
-          {
-            match: {
-              id: "lisp",
-            },
-            id: "lines",
-          },
-          {
-            match: {
-              id: "elixir",
-            },
-            id: "lines",
-          },
-          {
-            match: {
-              id: "javascript",
-            },
-            id: "lines",
-          },
-        ]}
-        legends={[
-          {
-            anchor: "bottom",
-            direction: "row",
-            justify: false,
-            translateX: 0,
-            translateY: 56,
-            itemsSpacing: 0,
-            itemWidth: 100,
-            itemHeight: 18,
-            itemTextColor: "#999",
-            itemDirection: "left-to-right",
-            itemOpacity: 1,
-            symbolSize: 18,
-            symbolShape: "circle",
-            effects: [
-              {
-                on: "hover",
-                style: {
-                  itemTextColor: "#000",
-                },
-              },
-            ],
-          },
+
+      <VictoryPie
+        colorScale={["tomato", "orange", "gold", "cyan", "navy"]}
+        data={[
+          { x: "Cats", y: 35 },
+          { x: "Dogs", y: 40 },
+          { x: "Birds", y: 55 },
         ]}
       />
     </div>
