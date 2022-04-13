@@ -1,11 +1,11 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
-import navLogo from "../images/Logo.jpg";
+import navLogo from "../assets/images/Logo.jpg";
 import "./navbar.css";
 const navbar = () => {
   return (
     <Navbar bg="primary" variant="dark" className="nav-main">
-      <img src={navLogo} className="logoImg" alt="image is here" />
+      <img src={navLogo} className="logoImg" alt="image" />
       <Container className="nav-container">
         <Navbar.Brand href="#home" className="nav-text">
           Active Project Management

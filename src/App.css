@@ -44,6 +44,20 @@
   padding: 5px 13px;
 }
 
+.project-by-box {
+  width: 386px;
+  height: 320px;
+  background: #f2f2f2;
+  border: 1px solid #b3b3b3;
+  overflow: hidden;
+}
+.sub-section {
+  max-width: 1180px;
+  justify-content: space-between;
+}
+.main-heading {
+  color: #2187e5;
+}
 .flex-box {
   justify-content: space-between;
   border-bottom: 2px solid #bebcbb;
